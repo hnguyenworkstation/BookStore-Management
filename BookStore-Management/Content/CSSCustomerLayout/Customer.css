@@ -1,0 +1,81 @@
+﻿/*Using the whole page*/
+div#full-page{
+    position:relative;
+    font-family:'Segoe UI';
+    font-weight:bold;
+}
+
+/*Design for Actionlink*/
+.Register{
+    float: right;
+    margin-top: -1%;
+}
+
+.Register a:hover{
+    text-decoration:none;
+    color: green;
+}
+
+.cPhone{
+    float:left;
+    margin-top: -1%;
+}
+
+#divList{
+    height:30px; 
+}
+
+/*Design Nav Menu Header*/
+.navMenu{
+    float:right;
+    margin-right:8%;
+}
+
+.navMenu li{
+    display:inline;
+    border-right: solid 1px rgba(0,0,0,.1);
+    padding:20px;
+    padding-top:19px;
+    padding-bottom:22px;
+    -webkit-transition:all .5s ease-out;
+    -moz-transition:all .5s ease-out;
+}
+
+/*When the mouse hover on the menu*/
+.navMenu li:hover{
+    background-color:rgba(0,0,0,.1);
+    -webkit-transition:all .5s ease-out;
+    -moz-transition:all .5s ease-out;
+}
+
+.navMenu a:hover{
+    text-decoration:none;
+}
+
+/*Design Searching Textbox*/
+#SearchBox{
+    float:left;
+    margin-left:4%;
+}
+
+#SearchBox input{
+    height:0;
+}
+
+/*Edit Search IMage*/
+#SearchImage button{
+    margin-right: -65px;
+    padding:0 10px 0 10px;
+    background-color: #14a19a;
+}
+
+#SearchImage button:hover{
+    background-color: rgba(0,0,0,.5);
+    -webkit-transition:all .5s ease-out;
+    -moz-transition:all .5s ease-out;
+}
+
+#SearchImage img{
+    width:28px;
+    height:28px;
+}
