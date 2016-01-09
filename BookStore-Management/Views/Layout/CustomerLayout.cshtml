@@ -14,6 +14,13 @@
     @*Add CSS files of font awesome*@
     <link href="~/Content/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet" />
+
+    @*Add CSS File, JavaScript File of Nivo Slider*@
+    <link href="~/Nivo Slider/nivo-slider.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Nivo Slider/jquery.nivo.slider.js"></script>
+    <script src="~/Nivo Slider/jquery.nivo.slider.pack.js"></script>
+
 </head>
 
 <body>
@@ -89,6 +96,18 @@
                     See all activity
                 </a>
             </div>
+
+            @*Nivo Slider Div*@
+            <div id="slider" class="nivoSlider">
+                <img src="images/slide1.jpg" alt="" />
+                <a href="http://dev7studios.com"><img src="images/slide2.jpg" alt="" title="#htmlcaption" /></a>
+                <img src="images/slide3.jpg" alt="" title="This is an example of a caption" />
+                <img src="images/slide4.jpg" alt="" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+            </div>
+
         </section>
 
         <section>
@@ -139,5 +158,13 @@
             </div>
         </section>
     </div>
+
+    @*Hook up the Nivo Slider*@
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script>
+
 </body>
 </html>
