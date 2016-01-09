@@ -4,104 +4,140 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @*CSS file from free template website*@
     <link rel="stylesheet" href="~/Content/CSSCustomerLayout/fonts.css">
     <link rel="stylesheet" href="~/Content/CSSCustomerLayout/screen.css">
+
+    @*CSS files designed for Customer Layout*@
+    <link href="~/Content/CSSCustomerLayout/Customer.css" rel="stylesheet">
+
+    @*Add CSS files of font awesome*@
+    <link href="~/Content/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet" />
 </head>
+
 <body>
     @RenderBody()
-    
-    <section class="blank">
-        <div class="flash">
-            <a href="#" class="close"><i class="icon icon-remove"></i></a>
-            <span><i class="icon-2x icon-star"></i></span>
-            <p>Such a generic message</p>
-        </div>
-        <div class="flash error">
-            <a href="#" class="close"><i class="icon icon-remove"></i></a>
-            <span><i class="icon-2x icon-warning-sign"></i></span>
-            <p>This is an error message</p>
-        </div>
+    <div id="full-page">
 
-        <div class="flash success">
-            <a href="#" class="close"><i class="icon icon-remove"></i></a>
-            <span><i class="icon-2x icon-smile"></i></span>
-            <p>The thing you just did totally just worked!</p>
-        </div>
-    </section>
+        <section class="blank">
+            <div class="flash">
+                <div class="cPhone">
+                    <i class="fa fa-phone"></i>
+                    (1) 978-631-5334
+                </div>
+                <div class="Register">
+                    @*New Div to Register or Login*@
+                    <i class="fa fa-unlock"></i>
+                    @Html.ActionLink("Register", "Regis", null, htmlAttributes: new { @class = "Regis" })
+                    <i class="fa fa-sign-in"></i>
+                    @Html.ActionLink("Login", "login", null, htmlAttributes: new { @class = "login" })
 
-    <section>
-        <div class="activity">
-            <h1 class="item-header">Recent Activity</h1>
-
-            <div class="activity-list-update">
-                <img src="http://lorempixel.com/50/50/" alt="Image">
-                <p><strong>Dennis The Dude</strong> updated his <a href="#">user profile</a>.</p>
-                <div class="clear"></div>
+                </div>
             </div>
 
-            <div class="activity-list-update">
-                <img src="http://lorempixel.com/50/50/" alt="Image">
-                <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
-                <div class="clear"></div>
+            @*Design Nav Menu On the Right Side*@
+            <div class="flash success" id="divList">
+                @*Making A Search Box*@
+                <div id="SearchBox">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.TextBox("SearchBox","",htmlAttributes: new {@class="TextBoxSearch", @placeholder="Enter text..."});
+                        @*IMage Button for Search Box*@
+                        <div id="SearchImage">
+                            <button type="submit">
+                                <img src="~/Content/Images/Silver-Image-Search-PNG-03180.png" />
+                            </button>
+                        </div>
+                    }
+                </div>
+
+
+                <ul class="navMenu">
+                    <li><a href="#">MAIN PAGE</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">GUIDE</a></li>
+                    <li><a href="#">INVENTORY</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="activity">
+                <h1 class="item-header">Recent Activity</h1>
+
+                <div class="activity-list-update">
+                    <img src="http://lorempixel.com/50/50/" alt="Image">
+                    <p><strong>Dennis The Dude</strong> updated his <a href="#">user profile</a>.</p>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="activity-list-update">
+                    <img src="http://lorempixel.com/50/50/" alt="Image">
+                    <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="activity-list-update">
+                    <img src="http://lorempixel.com/50/50/" alt="Image">
+                    <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
+                    <div class="clear"></div>
+                </div>
+
+                <a href="#" class="item-footer green">
+                    See all activity
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <a href="#" class="button">This is a button</a>
+
+                <a href="#" class="button button-submit">This is a save button</a>
+
+                <a href="#" class="button">Button with a counter <span class="notification">22</span></a>
+
+                <a href="#" class="button button-and-icon">
+                    <div><i class="icon-large icon-cog"></i></div>Button with an icon
+                </a>
             </div>
 
-            <div class="activity-list-update">
-                <img src="http://lorempixel.com/50/50/" alt="Image">
-                <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
-                <div class="clear"></div>
+            <hr>
+
+            <div>
+                <a href="#" class="button button-submit">Submit</a>
+                <a href="#" class="button button-cancel">Cancel</a>
+                <a href="#" class="button button-delete">Delete</a>
             </div>
 
-            <a href="#" class="item-footer green">
-                See all activity
-            </a>
-        </div>
-    </section>
+            <hr>
 
-    <section>
-        <div>
-            <a href="#" class="button">This is a button</a>
-
-            <a href="#" class="button button-submit">This is a save button</a>
-
-            <a href="#" class="button">Button with a counter <span class="notification">22</span></a>
-
-            <a href="#" class="button button-and-icon">
-                <div><i class="icon-large icon-cog"></i></div>Button with an icon
-            </a>
-        </div>
-
-        <hr>
-
-        <div>
-            <a href="#" class="button button-submit">Submit</a>
-            <a href="#" class="button button-cancel">Cancel</a>
-            <a href="#" class="button button-delete">Delete</a>
-        </div>
-
-        <hr>
-
-        <div>
-            <a href="#" class="button button-small">Smaller button</a>
-        </div>
-
-        <hr>
-
-        <div>
-            <a href="#" class="button button-buy">Buy button (full width for columns)</a>
-        </div>
-    </section>
-
-    <section class="blank items">
-        <div class="item">
-            <img src="http://lorempixel.com/400/300/" alt="Image">
-
-            <div class="item-info">
-                <h1>Item title</h1>
-                <p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some.</p>
-                <span class="price">£49.99</span>
-                <a href="#" class="button button-buy">Get it now</a>
+            <div>
+                <a href="#" class="button button-small">Smaller button</a>
             </div>
-        </div>
-    </section>
+
+            <hr>
+
+        </section>
+
+        <section class="blank items">
+            <div class="item">
+                <img src="http://lorempixel.com/400/300/" alt="Image">
+
+                <div class="item-info">
+                    <h1>Item title</h1>
+                    <p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some.</p>
+                    <span class="price">£49.99</span>
+                    <a href="#" class="button button-buy">Get it now</a>
+                </div>
+            </div>
+
+            <div>
+                <a href="#" class="button button-buy">Buy button (full width for columns)</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
