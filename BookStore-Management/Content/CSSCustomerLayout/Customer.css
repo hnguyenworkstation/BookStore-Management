@@ -79,3 +79,31 @@ div#full-page{
     width:28px;
     height:28px;
 }
+
+/*Edit Slider Frames*/
+#slider{
+    float:right;
+    width:850px;
+    height:356px;
+}
+
+#slider img{
+    width:850px;
+    height:356px;
+}
+
+#LeftMenu{
+    float:left;
+}
+
+/*Edit Publisher List Displayment*/
+#LeftPublisherList{
+    width: 300px;
+    float:left;
+}
+
+#RightInformation{
+    width:800px;
+    float:right;
+    word-break:break-all;
+}

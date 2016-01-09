@@ -24,7 +24,6 @@
 </head>
 
 <body>
-    @RenderBody()
     <div id="full-page">
 
         <section class="blank">
@@ -70,31 +69,35 @@
             </div>
         </section>
 
+
         <section>
-            <div class="activity">
-                <h1 class="item-header">Recent Activity</h1>
+            @*Left Menu for new Books*@
+            <div id="LeftMenu">
+                <div class="activity">
+                    <h1 class="item-header">Recent Activity</h1>
 
-                <div class="activity-list-update">
-                    <img src="http://lorempixel.com/50/50/" alt="Image">
-                    <p><strong>Dennis The Dude</strong> updated his <a href="#">user profile</a>.</p>
-                    <div class="clear"></div>
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <a href="#" class="item-footer green">
+                        Visit New Books
+                    </a>
                 </div>
-
-                <div class="activity-list-update">
-                    <img src="http://lorempixel.com/50/50/" alt="Image">
-                    <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="activity-list-update">
-                    <img src="http://lorempixel.com/50/50/" alt="Image">
-                    <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
-                    <div class="clear"></div>
-                </div>
-
-                <a href="#" class="item-footer green">
-                    See all activity
-                </a>
             </div>
 
             @*Nivo Slider Div*@
@@ -104,65 +107,70 @@
                 <img src="~/Content/Images/cover_book_quote-553022.jpg" />
                 <img src="~/Content/Images/yO1A5Ed5KqZU8D7OPESEubFJ6nTmzlcXUfqlm4etiSE6eNC6cYyb1mFXJrDRtzEh.jpg" />
             </div>
-            <div id="htmlcaption" class="nivo-html-caption">
-                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
-            </div>
-
+            <div style="clear:both"> </div>
         </section>
+
+        <div id="introduction">
+            @RenderBody()
+        </div>
 
         <section>
+            @*Topic Buttons*@
             <div>
-                <a href="#" class="button">This is a button</a>
-
-                <a href="#" class="button button-submit">This is a save button</a>
-
-                <a href="#" class="button">Button with a counter <span class="notification">22</span></a>
-
-                <a href="#" class="button button-and-icon">
-                    <div><i class="icon-large icon-cog"></i></div>Button with an icon
-                </a>
-            </div>
-
-            <hr>
-
-            <div>
-                <a href="#" class="button button-submit">Submit</a>
-                <a href="#" class="button button-cancel">Cancel</a>
-                <a href="#" class="button button-delete">Delete</a>
-            </div>
-
-            <hr>
-
-            <div>
-                <a href="#" class="button button-small">Smaller button</a>
+                <a href="#" class="button">SCIENCE</a>
+                <a href="#" class="button button-submit">MUSIC</a>
+                <a href="#" class="button">COMPUTER</a>
+                <a href="#" class="button button-submit">UNIVERSAL</a>
+                <a href="#" class="button">BIOLOGY</a>
+                <a href="#" class="button button-submit">WORLDWIDE</a>
             </div>
 
             <hr>
 
         </section>
-
+        @*Publish Information*@
+        <div style="clear:both"></div>
         <section class="blank items">
-            <div class="item">
-                <img src="http://lorempixel.com/400/300/" alt="Image">
+            @*publisher list on the left side*@
+            <div id="LeftPublsiherList">
+                <div class="item">
+                    <div class="item-info">
+                        <h1>Publisher Information</h1>
 
-                <div class="item-info">
-                    <h1>Item title</h1>
-                    <p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some.</p>
-                    <span class="price">£49.99</span>
-                    <a href="#" class="button button-buy">Get it now</a>
+                        <div><a href="#">BOSTON</a></div>
+                        <div><a href="#">BOSTON</a></div>
+                        <div><a href="#">BOSTON</a></div>
+                        <div><a href="#">BOSTON</a></div>
+                        <div><a href="#">BOSTON</a></div>
+
+                    </div>
+
+                    <img src="http://lorempixel.com/400/300/" alt="Image">
                 </div>
+
             </div>
 
-            <div>
-                <a href="#" class="button button-buy">Buy button (full width for columns)</a>
-            </div>
+
+                <div id="RightInformation">
+                    @RenderSection("RightInformation")
+                </div>
+                @*Breaking the line*@
+                <div style="clear:both"></div>
+                <div>
+                    <a href="#" class="button button-buy">Buy button (full width for columns)</a>
+                </div>
+
         </section>
     </div>
 
     @*Hook up the Nivo Slider*@
     <script type="text/javascript">
         $(window).load(function() {
-            $('#slider').nivoSlider();
+            $('#slider').nivoSlider({
+                controlNav: false,
+                prevText: '',
+                nextText: '',
+            });
         });
     </script>
 
