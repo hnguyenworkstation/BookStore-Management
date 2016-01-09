@@ -216,7 +216,11 @@
     <Content Include="Content\font-awesome-4.5.0\css\font-awesome.css" />
     <Content Include="Content\font-awesome-4.5.0\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome-4.5.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\book-music-violin-key-facebook-cover.jpg" />
+    <Content Include="Content\Images\christian_books_cover.jpg" />
+    <Content Include="Content\Images\cover_book_quote-553022.jpg" />
     <Content Include="Content\Images\Silver-Image-Search-PNG-03180.png" />
+    <Content Include="Content\Images\yO1A5Ed5KqZU8D7OPESEubFJ6nTmzlcXUfqlm4etiSE6eNC6cYyb1mFXJrDRtzEh.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
