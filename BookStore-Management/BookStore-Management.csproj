@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -199,13 +201,137 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\aaaa.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BookStoreManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookStoreManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookStoreManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookStoreManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookStoreManagement.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChiTietDonHang.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChuDe.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ddddd.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonHang.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dsadsa.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KhachHang.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NhaXuatBan.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sach.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TacGia.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThamGia.cs">
+      <DependentUpon>BookStoreManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BookImages\000001.jpg" />
+    <Content Include="BookImages\000002.jpg" />
+    <Content Include="BookImages\000003.jpg" />
+    <Content Include="BookImages\000004.jpg" />
+    <Content Include="BookImages\000005.jpg" />
+    <Content Include="BookImages\000006.jpg" />
+    <Content Include="BookImages\000007.jpg" />
+    <Content Include="BookImages\000008.jpg" />
+    <Content Include="BookImages\000009.jpg" />
+    <Content Include="BookImages\000010.jpg" />
+    <Content Include="BookImages\000011.jpg" />
+    <Content Include="BookImages\000012.jpg" />
+    <Content Include="BookImages\000013.jpg" />
+    <Content Include="BookImages\000014.jpg" />
+    <Content Include="BookImages\000015.jpg" />
+    <Content Include="BookImages\000016.jpg" />
+    <Content Include="BookImages\000017.jpg" />
+    <Content Include="BookImages\000018.jpg" />
+    <Content Include="BookImages\000019.jpg" />
+    <Content Include="BookImages\000020.jpg" />
+    <Content Include="BookImages\000021.jpg" />
+    <Content Include="BookImages\000022.jpg" />
+    <Content Include="BookImages\000023.jpg" />
+    <Content Include="BookImages\000024.jpg" />
+    <Content Include="BookImages\000025.jpg" />
+    <Content Include="BookImages\000026.jpg" />
+    <Content Include="BookImages\000027.jpg" />
+    <Content Include="BookImages\000028.jpg" />
+    <Content Include="BookImages\000029.jpg" />
+    <Content Include="BookImages\000030.jpg" />
+    <Content Include="BookImages\000031.jpg" />
+    <Content Include="BookImages\000032.jpg" />
+    <Content Include="BookImages\000033.jpg" />
+    <Content Include="BookImages\000034.jpg" />
+    <Content Include="BookImages\000035.jpg" />
+    <Content Include="BookImages\000036.jpg" />
+    <Content Include="BookImages\000037.jpg" />
+    <Content Include="BookImages\000038.jpg" />
+    <Content Include="BookImages\000039.jpg" />
+    <Content Include="BookImages\000040.jpg" />
+    <Content Include="BookImages\000041.jpg" />
+    <Content Include="BookImages\000042.jpg" />
+    <Content Include="BookImages\000043.jpg" />
+    <Content Include="BookImages\000044.jpg" />
+    <Content Include="BookImages\000045.jpg" />
+    <Content Include="BookImages\000046.jpg" />
+    <Content Include="BookImages\000047.jpg" />
+    <Content Include="BookImages\000048.jpg" />
+    <Content Include="BookImages\000049.jpg" />
+    <Content Include="BookImages\000050.jpg" />
+    <Content Include="BookImages\000051.jpg" />
+    <Content Include="BookImages\000052.jpg" />
+    <Content Include="BookImages\000053.jpg" />
+    <Content Include="BookImages\000054.jpg" />
+    <Content Include="BookImages\000055.jpg" />
+    <Content Include="BookImages\000056.jpg" />
+    <Content Include="BookImages\000057.jpg" />
+    <Content Include="BookImages\000058.jpg" />
+    <Content Include="BookImages\000059.jpg" />
+    <Content Include="BookImages\000060.jpg" />
+    <Content Include="BookImages\000061.jpg" />
+    <Content Include="BookImages\000062.jpg" />
+    <Content Include="BookImages\000063.jpg" />
+    <Content Include="BookImages\000064.jpg" />
+    <Content Include="BookImages\10799735_955247194489946_1847856557_n.jpg" />
+    <Content Include="BookImages\994849_563440020371129_1594360530_n.jpg" />
+    <Content Include="BookImages\a.jpg" />
+    <Content Include="BookImages\a123.jpg" />
+    <Content Include="BookImages\aadasdsa.jpg" />
+    <Content Include="BookImages\asp.net-mvc.jpg" />
+    <Content Include="BookImages\b.jpg" />
+    <Content Include="BookImages\dsadas.jpg" />
+    <Content Include="BookImages\nnn.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSSCustomerLayout\Customer.css" />
@@ -225,6 +351,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\BookStoreManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookStoreManagement.edmx</DependentUpon>
+      <LastGenOutput>BookStoreManagement.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BookStoreManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookStoreManagement.edmx</DependentUpon>
+      <LastGenOutput>BookStoreManagement.cs</LastGenOutput>
+    </Content>
     <Content Include="Nivo Slider\jquery.nivo.slider.js" />
     <Content Include="Nivo Slider\jquery.nivo.slider.pack.js" />
     <Content Include="Nivo Slider\nivo-slider.css" />
@@ -240,6 +376,13 @@
     <Content Include="Content\font-awesome-4.5.0\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\font-awesome-4.5.0\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\font-awesome-4.5.0\fonts\FontAwesome.otf" />
+    <EntityDeploy Include="Models\BookStoreManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookStoreManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BookStoreManagement.edmx.diagram">
+      <DependentUpon>BookStoreManagement.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -264,6 +407,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Layout\CustomerLayout.cshtml" />
+    <Content Include="Views\Home\NewBooksPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +419,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

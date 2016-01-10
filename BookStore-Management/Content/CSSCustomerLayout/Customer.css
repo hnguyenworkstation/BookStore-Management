@@ -97,13 +97,17 @@ div#full-page{
 }
 
 /*Edit Publisher List Displayment*/
-#LeftPublisherList{
-    width: 300px;
+#LeftPublisherList {
+    width: 30%;
     float:left;
 }
 
+#LeftPublisherList .item{
+    width:100%;
+}
+
 #RightInformation{
-    width:800px;
     float:right;
-    word-break:break-all;
+    width:65%;
+    margin-top:-500px;
 }

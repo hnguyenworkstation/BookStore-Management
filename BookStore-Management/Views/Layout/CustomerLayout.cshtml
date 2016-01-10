@@ -69,34 +69,12 @@
             </div>
         </section>
 
-
         <section>
             @*Left Menu for new Books*@
             <div id="LeftMenu">
                 <div class="activity">
-                    <h1 class="item-header">Recent Activity</h1>
-
-                    <div class="activity-list-update">
-                        <img src="http://lorempixel.com/50/50/" alt="Image">
-                        <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="activity-list-update">
-                        <img src="http://lorempixel.com/50/50/" alt="Image">
-                        <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="activity-list-update">
-                        <img src="http://lorempixel.com/50/50/" alt="Image">
-                        <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
-                        <div class="clear"></div>
-                    </div>
-
-                    <a href="#" class="item-footer green">
-                        Visit New Books
-                    </a>
+                    @*Insert Partial View for new Books*@
+                    @Html.Action("NewBooksPartial","Home")
                 </div>
             </div>
 
@@ -148,19 +126,15 @@
                     <img src="http://lorempixel.com/400/300/" alt="Image">
                 </div>
 
+                <div id="RightInformation">
+                        @RenderSection("Information")
+                </div>
             </div>
 
-
-                <div id="RightInformation">
-                    @RenderSection("RightInformation")
-                </div>
-                @*Breaking the line*@
-                <div style="clear:both"></div>
-                <div>
-                    <a href="#" class="button button-buy">Buy button (full width for columns)</a>
-                </div>
-
-        </section>
+            <div>
+                <a href="#" class="button button-buy">Buy button (full width for columns)</a>
+            </div>
+         </section>
     </div>
 
     @*Hook up the Nivo Slider*@
