@@ -11,18 +11,10 @@ namespace BookStore_Management.Controllers
     {
         // GET: Home
 
-        // Create a Database
-        QuanLyBanSachEntities db = new QuanLyBanSachEntities();
-
         public ActionResult Index()
         {
             return View();
         }
 
-        public PartialViewResult NewBooksPartial()
-        {
-            var listNewBooks = db.Saches.Take(3).ToList();
-            return PartialView(listNewBooks);
-        }
     }
 }

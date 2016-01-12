@@ -74,7 +74,7 @@
             <div id="LeftMenu">
                 <div class="activity">
                     @*Insert Partial View for new Books*@
-                    @Html.Action("NewBooksPartial","Home")
+                    @Html.Action("NewBooksPartial","Book")
                 </div>
             </div>
 
@@ -95,6 +95,7 @@
         <section>
             @*Topic Buttons*@
             <div>
+                @Html.Action("TopicPartial", "Topic");
                 <a href="#" class="button">SCIENCE</a>
                 <a href="#" class="button button-submit">MUSIC</a>
                 <a href="#" class="button">COMPUTER</a>
