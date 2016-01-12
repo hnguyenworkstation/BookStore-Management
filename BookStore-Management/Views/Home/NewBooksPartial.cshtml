@@ -1,32 +1,19 @@
 ﻿@using BookStore_Management.Models;
 @model List<Sach>
 
+<h1 class="item-header">Recent Activity</h1>
+
 @{
     foreach (var item in Model)
     {
         <div class="activity-list-update">
             <img src="@Url.Content("~/BookImages/" + item.AnhBia)" width="50" height="50" alt="Image">
-            <p><strong>@item.BookName</strong> updated his <a href="#">new books</a>.</p>
+            <p><strong>@item.TenSach</strong> updated his <a href="#">new books</a>.</p>
             <div class="clear"></div>
         </div>
     }
 }
 
-<h1 class="item-header">Recent Activity</h1>
-
-
-
-<div class="activity-list-update">
-    <img src="http://lorempixel.com/50/50/" alt="Image">
-    <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
-    <div class="clear"></div>
-</div>
-
-<div class="activity-list-update">
-    <img src="http://lorempixel.com/50/50/" alt="Image">
-    <p><strong>Jason Nguyen</strong> updated his <a href="#">new books</a>.</p>
-    <div class="clear"></div>
-</div>
 
 <a href="#" class="item-footer green">
     Visit New Books
