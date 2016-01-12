@@ -9,11 +9,13 @@ namespace BookStore_Management.Controllers
 {
     public class HomeController : Controller
     {
+        // Declare Database
+        QuanLyBanSachEntities db = new QuanLyBanSachEntities();
         // GET: Home
-
         public ActionResult Index()
         {
-            return View();
+
+            return View(db.Saches.Where(x=>x.Moi == 1).ToList());
         }
 
     }

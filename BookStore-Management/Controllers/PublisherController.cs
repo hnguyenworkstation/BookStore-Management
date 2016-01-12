@@ -6,16 +6,14 @@ using System.Web.Mvc;
 using BookStore_Management.Models;
 
 namespace BookStore_Management.Controllers
-{
-    public class TopicController : Controller
+{   
+    public class PublisherController : Controller
     {
-        // Add Local Database
         QuanLyBanSachEntities db = new QuanLyBanSachEntities();
-
-        // GET: Topic
-        public PartialViewResult TopicPartial()
+        // GET: Publisher
+        public PartialViewResult PublisherPartial()
         {
-            return PartialView(db.ChuDes.Take(5).ToList());
+            return PartialView(db.NhaXuatBans.Take(10).ToList().OrderBy(x=>x.TenNXB));
         }
     }
 }

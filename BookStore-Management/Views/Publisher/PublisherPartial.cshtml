@@ -1,0 +1,11 @@
+﻿@using BookStore_Management.Models;
+@model List<NhaXuatBan>
+
+    @*Title of Publisher Partial*@
+    <h1>Publisher Information</h1>
+
+    @foreach (var item in Model)
+    {
+        <div><a href="#">@item.TenNXB</a></div>
+    }
+

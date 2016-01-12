@@ -199,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -349,6 +350,7 @@
     <Content Include="Content\Images\cover_book_quote-553022.jpg" />
     <Content Include="Content\Images\Silver-Image-Search-PNG-03180.png" />
     <Content Include="Content\Images\yO1A5Ed5KqZU8D7OPESEubFJ6nTmzlcXUfqlm4etiSE6eNC6cYyb1mFXJrDRtzEh.jpg" />
+    <Content Include="Content\MainPageView.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -410,10 +412,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Layout\CustomerLayout.cshtml" />
     <Content Include="Views\Book\NewBooksPartial.cshtml" />
+    <Content Include="Views\Topic\TopicPartial.cshtml" />
+    <Content Include="Views\Publisher\PublisherPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Topic\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

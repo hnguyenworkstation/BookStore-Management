@@ -95,13 +95,7 @@
         <section>
             @*Topic Buttons*@
             <div>
-                @Html.Action("TopicPartial", "Topic");
-                <a href="#" class="button">SCIENCE</a>
-                <a href="#" class="button button-submit">MUSIC</a>
-                <a href="#" class="button">COMPUTER</a>
-                <a href="#" class="button button-submit">UNIVERSAL</a>
-                <a href="#" class="button">BIOLOGY</a>
-                <a href="#" class="button button-submit">WORLDWIDE</a>
+                @Html.Action("TopicPartial", "Topic")
             </div>
 
             <hr>
@@ -114,14 +108,8 @@
             <div id="LeftPublsiherList">
                 <div class="item">
                     <div class="item-info">
-                        <h1>Publisher Information</h1>
-
-                        <div><a href="#">BOSTON</a></div>
-                        <div><a href="#">BOSTON</a></div>
-                        <div><a href="#">BOSTON</a></div>
-                        <div><a href="#">BOSTON</a></div>
-                        <div><a href="#">BOSTON</a></div>
-
+                        @*Added Publisher Parital View*@
+                        @Html.Action("PublisherPartial", "Publisher")
                     </div>
 
                     <img src="http://lorempixel.com/400/300/" alt="Image">
