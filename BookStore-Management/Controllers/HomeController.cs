@@ -14,7 +14,6 @@ namespace BookStore_Management.Controllers
         // GET: Home
         public ActionResult Index()
         {
-
             return View(db.Saches.Where(x=>x.Moi == 1).ToList());
         }
 
