@@ -1,6 +1,8 @@
-﻿div#Products {
+﻿
+/*Edit the Product Views*/
+div#Book {
     float:left;
-    width: 400px;
+    width:300px;
 }
 #divBody{
     margin-left: 200px;

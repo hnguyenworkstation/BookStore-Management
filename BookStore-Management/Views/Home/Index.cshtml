@@ -11,19 +11,26 @@
 }
 
 @*Div Body Index*@
-
 <div id="divBody">
     @*Loading Books from Database to Main View*@
     @{ int i = 0;}
+
     @foreach (var item in Model)
     {
         i++;
-        <div id="Products">
+        <div id="Book">
             <div id="BookCover"><img src="@Url.Content("~/BookImages/" + @item.AnhBia)" width="100" height="150" /></div>
             <div id="BookName">@item.TenSach</div>
             <div id="BookPrice">@item.GiaBan</div>
         </div>
-        if(i == 4) { i = 0; } //Make it displays three books per line
+
+        //Make it displays three books per line
+        if (i % 3 == 0)
+        {
+            <div style="clear:both"></div>
+        }
     }
 
 </div>
+
+<div style="clear:both"></div>
