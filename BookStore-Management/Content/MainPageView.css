@@ -1,2 +1,7 @@
-﻿body {
+﻿div#Products {
+    float:left;
+    width: 400px;
+}
+#divBody{
+    margin-left: 200px;
 }
