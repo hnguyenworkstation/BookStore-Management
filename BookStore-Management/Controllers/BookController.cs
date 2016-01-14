@@ -23,5 +23,18 @@ namespace BookStore_Management.Controllers
             var listNewBooks = db.Saches.Take(3).ToList();
             return PartialView(listNewBooks);
         }
+
+        // Get the action of "click to view more" or "View Details"
+        public ViewResult viewDetails(int BookID)
+        {
+            Sach book = db.Saches.SingleOrDefault(n => n.MaSach == BookID);
+            if(book == null)
+            {
+                //Return Error Page -- 404 Error
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(book);
+        }
     }
 }

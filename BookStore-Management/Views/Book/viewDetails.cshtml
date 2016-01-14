@@ -1,0 +1,13 @@
+﻿@using BookStore_Management.Models;
+@model Sach
+
+@{
+    ViewBag.Title = "viewDetails";
+    Layout = "~/Views/Layout/CustomerLayout.cshtml";
+}
+
+@*Book details*@
+<div><img src="@Url.Content("~/BookImages/" + Model.AnhBia)" /></div>
+<div>Book ID: @Model.MaSach</div>
+<div>Book Title: @Model.TenSach</div>
+<div>Information: @Model.MoTa</div>
