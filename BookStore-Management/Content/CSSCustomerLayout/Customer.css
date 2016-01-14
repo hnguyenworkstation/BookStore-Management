@@ -111,12 +111,3 @@ div#full-page{
     width:65%;
     margin-top:-500px;
 }
-
-/*Edit the Product Views*/
-div#Book {
-    float:left;
-    width:300px;
-}
-#divBody{
-    margin-left: 200px;
-}

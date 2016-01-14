@@ -2,8 +2,38 @@
 /*Edit the Product Views*/
 div#Book {
     float:left;
-    width:300px;
+    width:250px;
+    margin-left:10%;
+    margin-top:10px;
 }
+
+div#Book img {
+    width:200px;
+    height:200px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+#BookInfo {
+    border:1px solid rgba(0,0,0,.2);
+    padding:0 15px 15px 15px;
+    font-family:'Segoe UI';
+    font-size:18pt;
+    font-weight:400;    
+}
+
+/*Div tên sách*/
+#BookName {
+    padding:5px;
+    height:80px;
+}
+
+#SinglePrice {
+    padding:5px;
+    font-size:13pt;
+    border-top:1px solid rgba(0,0,0,.2);
+}
+
 #divBody{
-    margin-left: 200px;
+    margin:auto;
 }
