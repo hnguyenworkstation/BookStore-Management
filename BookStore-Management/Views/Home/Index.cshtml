@@ -19,12 +19,21 @@
     {
         i++;
         <div id="Book">
-            <div id="BookCover"><img src="@Url.Content("~/BookImages/" + @item.AnhBia)" width="100" height="150" /></div>
-            <div id="BookName">@item.TenSach</div>
-            <div id="BookPrice">@item.GiaBan</div>
+            <a href="@Url.Action("XemChiTiet", "Sach", new { @MaSach=item.MaSach })">  <div id="AnhBia"><img src="@Url.Content("~/BookImages/"+item.AnhBia)" width="100" height="150" /></div></a>
+            <div id="BookInfo">
+                @*If book name is longer than 30 chars, split it*@
+                @if (item.TenSach.Length < 35)
+                {
+                    <div id="BookName" title="@item.TenSach">@item.TenSach.</div>
+                }
+                else
+                {
+                    <div id="BookName" title="@item.TenSach"> @item.TenSach.Substring(0, 35) ...</div>
+                }
+                @*Edit CSS for the Price tag*@
+                <div id="SinglePrice" style="color:orange"><font color="Green">Giá:</font> @String.Format("{0:0,0}", item.GiaBan) VNĐ</div>
+            </div>
         </div>
-
-        //Make it displays three books per line
         if (i % 3 == 0)
         {
             <div style="clear:both"></div>
