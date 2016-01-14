@@ -414,6 +414,8 @@
     <Content Include="Views\Book\NewBooksPartial.cshtml" />
     <Content Include="Views\Topic\TopicPartial.cshtml" />
     <Content Include="Views\Publisher\PublisherPartial.cshtml" />
+    <Content Include="Views\Book\viewDetails.cshtml" />
+    <Content Include="Views\Topic\booksByTopic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
