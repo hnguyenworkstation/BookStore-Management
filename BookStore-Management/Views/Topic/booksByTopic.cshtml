@@ -1,0 +1,34 @@
+﻿@using BookStore_Management.Models;
+@model List<Sach>
+
+@{
+    ViewBag.Title = "booksByTopic";
+    Layout = "~/Views/Layout/CustomerLayout.cshtml";
+}
+
+@*List of books for each topic*@
+@{int i = 0; }
+@foreach (var item in Model)
+{
+    i++;
+    <div id="Book">
+        <a href="@Url.Action("XemChiTiet", "Sach", new { @MaSach=item.MaSach })">  <div id="AnhBia"><img src="@Url.Content("~/BookImages/"+item.AnhBia)" width="100" height="150" /></div></a>
+        <div id="BookInfo">
+            @*If book name is longer than 30 chars, split it*@
+            @if (item.TenSach.Length < 35)
+                {
+                <div id="BookName" title="@item.TenSach">@item.TenSach.</div>
+            }
+            else
+            {
+                <div id="BookName" title="@item.TenSach"> @item.TenSach.Substring(0, 35) ...</div>
+            }
+            @*Edit CSS for the Price tag*@
+            <div id="SinglePrice" style="color:orange"><font color="Green">Giá:</font> @String.Format("{0:0,0}", item.GiaBan) VNĐ</div>
+        </div>
+    </div>
+    if (i % 3 == 0)
+    {
+        <div style="clear:both"></div>
+    }
+}
